@@ -43,8 +43,8 @@ def RRT(start, gl, obstacle_list):
     pts = [start]
 
     for i in range(nodes):
-        r1 = round(random.uniform(start[0], gl[0]), 2)
-        r2 = round(random.uniform(start[1], gl[1]), 2)
+        r1 = round(random.uniform(0, 10), 2)
+        r2 = round(random.uniform(0, 10), 2)
         nrst = nearest(r1, r2, pts)
         try:
             x, y = findpoint(nrst[0], nrst[1], r1, r2, stepd)
